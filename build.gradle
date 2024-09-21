@@ -11,10 +11,37 @@ repositories {
 }
 
 dependencies {
+    // Spring Web MVC
     implementation group: 'org.springframework', name: 'spring-webmvc', version: '6.1.9'
+
+    // Spring Context (для работы с зависимостями и конфигурацией)
     implementation group: 'org.springframework', name: 'spring-context', version: '6.1.0'
+
+    // Spring ORM для интеграции с JPA и Hibernate
     implementation group: 'org.springframework', name: 'spring-orm', version: '6.1.0'
+
+    // Зависимость для работы с сервлетами
     implementation 'javax.servlet:javax.servlet-api:4.0.1'
+
+    // JPA API для аннотаций @Entity и других
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+
+    // Hibernate (реализация JPA)
+    implementation 'org.hibernate:hibernate-core:5.4.30.Final'
+
+    // Драйвер для базы данных (выбирай нужный)
+    implementation 'org.postgresql:postgresql:42.2.19'  // Для PostgreSQL
+    implementation 'com.h2database:h2:1.4.200'          // Для H2 in-memory базы данных (если тестируешь)
+
+    // Spring Data JPA без Spring Boot
+    implementation 'org.springframework.data:spring-data-jpa:2.7.13'
+
+    // Для работы с Lombok (опционально, для упрощения работы с сущностями)
+    implementation 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    // Транзакции Spring
+    implementation 'org.springframework:spring-tx:6.1.0'
 }
 
 test {
