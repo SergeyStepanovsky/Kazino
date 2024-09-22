@@ -28,11 +28,6 @@ public class GameRound {
         return CrashPoint;
     }
 
-    public static void main(String[] args) {
-        GameRound round = new GameRound();
-        System.out.println("Улетел на " + round.getCrashPoint());
-    }
-
 }
 
 
